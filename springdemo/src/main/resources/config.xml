@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define your beans here -->
+    <bean id="student1" class="com.springpractise.springdemo.Student" name="student1">
+     <property name="studentID">
+     <value>123</value>
+     </property>
+     
+      <property name="studentName">
+     <value>abc </value>
+     </property>
+     
+      <property name="studentAddress">
+     <value>xyz</value>
+     </property>
+    </bean>
+
+ <bean id="bref" class="com.springpractise.springdemo.b" name="bref">
+ <property name="y">
+ <value>5</value>
+ </property>
+ </bean>
+ 
+ <bean id="aref" class="com.springpractise.springdemo.a" name="aref">
+ <property name="x" value="12"/>
+ <property name="ob">
+ <ref bean="bref" />
+ </property>
+ </bean>
+ 
+</beans>
